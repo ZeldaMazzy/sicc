@@ -22,16 +22,20 @@ body {
   border: 1px solid #2B2B66;
 }
 
+.list-group-item {
+  border-width: 0 0 !important;
+}
 .list-group {
   --bs-list-group-bg: $primary-background !important;
   --bs-list-group-border-color: #2B2B66 !important;
   --bs-list-group-color: #C9C9C9 !important;
-  --bs-list-group-active-color: red !important;
+  --bs-list-group-active-color: #EEF2F5 !important;
 }
 
 .list-group-item-action:hover {
   background-color: #060628 !important;
   color: #EEF2F5 !important;
+  border: 1px solid #2B2B66;
 }
 
 @media (max-width: 991.98px) {
@@ -39,11 +43,8 @@ body {
     width: 100%;
   }
 }
-.sidebar .active {
-  border-radius: 5px;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 
-}
+
 .sidebar-sticky {
   position: relative;
   top: 0;
@@ -56,6 +57,7 @@ body {
 .logo {
   margin: 20px 0px 0px 20px;
 }
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
