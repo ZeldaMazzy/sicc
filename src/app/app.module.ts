@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { TasksComponent } from './app/tasks/tasks.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
   declarations: [
