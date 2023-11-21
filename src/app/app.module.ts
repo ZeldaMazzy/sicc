@@ -7,10 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { MissionControlComponent } from './app/mission-control/mission-control.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MissionControlComponent
-  ],
+  declarations:
+  [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
