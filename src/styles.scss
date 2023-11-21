@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/color-library.scss";
+body {
+  background-color: $primary-background;
+
+}
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0 0;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 240px;
+  z-index: 600;
+  border: 1px solid $border-color;
+}
+
+.list-group-item {
+  border-width: 0 0 !important;
+}
+
+.list-group {
+  --bs-list-group-bg: $primary-background !important;
+  --bs-list-group-border-color: $border-color !important;
+  --bs-list-group-color: #C9C9C9 !important;
+  --bs-list-group-active-color: #000000 !important;
+  // --bs-list-group-active-bg: $active-background !important;
+
+}
+
+.list-group-item-action:hover {
+  background-color: $active-background !important;
+  color: $active-text-color !important;
+  // border: 0.5px solid #2B2B66 !important;
+  cursor: pointer;
+}
+
+// .list-group-item-action:active {
+//   background-color: $active-background !important;
+//   color: $active-text-color !important;
+//   border: 1px solid $border-color!important;
+// }
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.logo {
+  margin: 20px 0px 0px 20px;
+}
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #C9C9C9 !important;
+  padding-left: 15px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: $primary-background;}
+
