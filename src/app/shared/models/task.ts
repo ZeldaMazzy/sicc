@@ -6,5 +6,5 @@ export interface Task {
     TaskDeadline: Date;
     TaskBudget: number;
     TaskCategory: string;
-    PhaseID: string | null;
+    PhaseID: number | null;
 }
