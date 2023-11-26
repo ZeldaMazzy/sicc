@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MissionControlComponent } from './mission-control.component';
 
 const routes: Routes = [{
-  path: '',
+  path: ':mission-id',
   component: MissionControlComponent
 }
 ];

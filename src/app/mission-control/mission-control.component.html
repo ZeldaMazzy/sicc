@@ -1,1 +1,6 @@
-<p>mission-control works!</p>
+<div class="missioncbox">
+    <h3>Mission Control</h3>
+    <h6>{{mission.MissionName}} - {{mission.MissionTagline}}</h6>
+</div>
+
+<app-mission-columns [missionTaskList]="mission.ListOfTasks"></app-mission-columns>

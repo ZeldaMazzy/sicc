@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./assets/color-library.scss";
+
 body {
   background-color: $primary-background;
 
 }
+
 /* Sidebar */
 .sidebar {
   position: fixed;
@@ -55,6 +57,7 @@ body {
 .logo {
   margin: 20px 0px 0px 20px;
 }
+
 .bottom {
   position: absolute;
   bottom: 0;
@@ -63,6 +66,23 @@ body {
   padding-left: 15px;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: $primary-background;}
+html,
+body {
+  height: 100%;
+}
 
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $primary-background;
+}
+
+h3,
+p {
+  color: $active-text-color;
+}
+
+h5,
+h6 {
+  color: $inactive-text-color;
+}
