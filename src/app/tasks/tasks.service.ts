@@ -17,7 +17,7 @@ export class TasksService {
 
   GetTasksByTasksID(TaskID: string): Observable<Task | null> {
     const task: Task| undefined = TEST_DATA_MISSIONTASKS.find(TasksID => {
-      return task.TaskID == TaskID;
+      return task?.TaskID == TaskID;
     })
     return of(task || null);
   }
@@ -35,5 +35,12 @@ export class TasksService {
     return of(taskToChange);
   }
 
+  RemoveTask(deleteTask: Task): Observable<void> {
+    const taskIndex: number = TEST_DATA_MISSIONTASKS.findIndex(task => {
+      return task.TaskID === deleteTask.TaskID;
+    })
+    TEST_DATA_MISSIONTASKS.splice(taskIndex);
+    return EMPTY;
+  }
 
 }
