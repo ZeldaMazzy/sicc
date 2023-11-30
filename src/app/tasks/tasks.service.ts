@@ -44,16 +44,7 @@ export class TasksService {
   }
 
   getTasksByMissionID(missionID: string): Observable<Task[]> {
-    const mission: Mission | undefined = TEST_DATA_MISSIONDATA.find(mission => mission.MissionID === missionID);
-
-    if (mission) {
-      const tasksForMission: Task[] = TEST_DATA_MISSIONTASKS.filter(task => task.MissionID === missionID);
-      return of(tasksForMission);
-    } else {
-      //Mission Nof Found
-      return EMPTY;
-    }
+    const tasksForMission: Task[] = TEST_DATA_MISSIONTASKS.filter((task) => task.MissionID === missionID);
+    return of(tasksForMission);
   }
-
-
 }
