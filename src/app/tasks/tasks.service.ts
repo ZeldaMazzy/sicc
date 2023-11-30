@@ -17,7 +17,7 @@ export class TasksService {
     return of (TEST_DATA_MISSIONTASKS)
   }
 
-  getTaskByTasksID(taskID: string): Observable<Task | null> {
+  GetTaskByTasksID(taskID: string): Observable<Task | null> {
     const task: Task | undefined = TEST_DATA_MISSIONTASKS.find(task => task.TaskID === taskID);
     return of(task || null);
   }
@@ -43,7 +43,7 @@ export class TasksService {
     return EMPTY;
   }
 
-  getTasksByMissionID(missionID: string): Observable<Task[]> {
+  GetTasksByMissionID(missionID: string): Observable<Task[]> {
     const tasksForMission: Task[] = TEST_DATA_MISSIONTASKS.filter((task) => task.MissionID === missionID);
     return of(tasksForMission);
   }
