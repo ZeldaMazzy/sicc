@@ -4,6 +4,7 @@ import { TaskCardComponent } from './task-card/task-card.component';
 import { TasksComponent } from './tasks.component';
 import { TasksRoutingModule } from './tasks-routing.module';
 import { EditTaskComponent } from './edit-task/edit-task.component';
+import { TaskDetailsComponent } from './task-details/task-details.component';
 
 
 
@@ -11,7 +12,8 @@ import { EditTaskComponent } from './edit-task/edit-task.component';
   declarations: [
     TaskCardComponent,
     TasksComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    TaskDetailsComponent
   ],
   imports: [
     CommonModule,
