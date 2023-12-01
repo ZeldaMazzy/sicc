@@ -1,0 +1,10 @@
+@import "../../assets/color-library.scss";
+
+
+
+.task-container {
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  color: $primary-background;
+}
