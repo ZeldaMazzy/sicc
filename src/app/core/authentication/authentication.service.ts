@@ -7,9 +7,16 @@ import { Router } from '@angular/router';
 import { AuthenticationResponse } from './authentication-response.model';
 import { User } from 'src/app/shared/user/user.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
+
+export class UserService {
+  private userSubject = new BehaviorSubject<User | null>(null);
+
+}
 
 export class AuthenticationService {
   private readonly loginURL: string = environment.firebaseLoginURL + environment.API_KEY;
@@ -34,14 +41,20 @@ public signOut(): void {
   this.router.navigate(["authentication"]);
 }
 
-public getUserDataFromStorage(): AuthenticationResponse | undefined {
-  return JSON.parse(localStorage.getItem("UserData"));
+
+public getUserDataFromStorage(): User | undefined {
+  const userData = localStorage.getItem("UserData");
+  if (!userData) {
+    return undefined;
+  }
+  return JSON.parse(userData);
 }
 
 public getAccessTokenFromStorage(): string {
-  if(!localStorage.getItem("userData")) return "";
-  const data = JSON.parse(localStorage.getItem("UserData"));
-  return data.accessToken;
+  const userData = localStorage.getItem("UserData");
+  if (!userData) return "";
+  const data = JSON.parse(userData);
+  return data.accessToken || "";
 }
 
 public handleAuth(authResponse: AuthenticationResponse): void {
@@ -50,3 +63,5 @@ public handleAuth(authResponse: AuthenticationResponse): void {
 }
 }
 
+//Dont need get token from Storage
+//crea te a behavious subject where it is user null uutuakuse ut yser null in auth Service
