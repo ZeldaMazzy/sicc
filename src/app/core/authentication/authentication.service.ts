@@ -12,15 +12,10 @@ import { User } from 'src/app/shared/user/user.model';
   providedIn: 'root'
 })
 
-
-export class UserService {
-  private userSubject = new BehaviorSubject<User | null>(null);
-
-}
-
 export class AuthenticationService {
   private readonly loginURL: string = environment.firebaseLoginURL + environment.API_KEY;
   private readonly signupURL: string = environment.firebaseLoginURL + environment.API_KEY;
+  public userSubject = new BehaviorSubject<User | null>(null);
   currentuser: any;
 
 
@@ -62,6 +57,3 @@ public handleAuth(authResponse: AuthenticationResponse): void {
   const expiresIn: number = Date.now() + +authResponse.expiresIn;
 }
 }
-
-//Dont need get token from Storage
-//crea te a behavious subject where it is user null uutuakuse ut yser null in auth Service
