@@ -1,13 +1,28 @@
-<p>mission-columns works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let phase of phases">
+      <!-- Column -->
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">{{ phase.title }}</h5>
+        </div>
+        <div class="card-body">
+          <!-- content for each column -->
+          {{ phase.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!--
-    Priority: 
-        3 columns that populate from missions  
+    Priority:
+        3 columns that populate from missions
         Fit based on # of missions
         Allow for editing/changing of missions.
 
-    Later: 
+    Later:
         Missions can be dragged/dropped from columns
         Create additional/misc columns
         LOading

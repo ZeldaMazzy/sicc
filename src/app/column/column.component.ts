@@ -5,22 +5,30 @@ import { Component } from '@angular/core';
   templateUrl: './column.component.html',
   styleUrls: ['./column.component.scss']
 })
-export class ColumnComponent {
-
-}
 
 // Create 3 column phases and sample tasks based on phase:
+export class ColumnComponent {
 
-const todoTasks = document.getElementById('todo-tasks');
-const planningTasks = document.getElementById('planning-tasks');
-const inprogressTasks = document.getElementById('inprogress-tasks');
+todoTasks: HTMLElement | null = null
+// todoTasks = document.getElementById('todo-tasks');
+planningTasks: HTMLElement | null = null;
+// planningTasks = document.getElementById('planning-tasks');
+inprogressTasks: HTMLElement | null = null;
+//inprogressTasks = document.getElementById('inprogress-tasks');
+
 // retrieve DOM element w respective ID, assign to appropriate variable
 
-const tasks: string[] = ['Task 1', 'Task 2', 'Task 3'];
+tasks: string[] = ['Task 1', 'Task 2', 'Task 3']; }
 // create array of sample tasks
 
-tasks.forEach((taskText, index) => {
-  const taskItem = document.createElement('div');
+ngOnInit() {
+  this.todoTasks = document.getElementById('todo-tasks');
+  this.planningTasks = document.getElementById('planning-tasks');
+  this.inprogressTasks = document.getElementById('inprogress-tasks');
+}
+
+this.tasks.forEach((taskText, index) => {
+  taskItem = document.createElement('div');
   taskItem.draggable = true;
   taskItem.className = 'alert alert-secondary';
   taskItem.textContent = taskText;
@@ -43,19 +51,19 @@ tasks.forEach((taskText, index) => {
 let draggedItem: HTMLElement | null = null;
 // declares a variable draggedItem with the type HTMLElement | null and initialized as null; this variable stores the reference of the element being drag and dropped
 
-function allowDrop(event: Event) {
+allowDrop(event: Event) {
   event.preventDefault();
 }
 //function allowDrop(event: Event) { event.preventDefault(); }: This function is called when an element is being dragged over a drop target; prevents the default behavior and allows element to drop
 
-function drag(event: DragEvent) {
+drag(event: DragEvent) {
   draggedItem = event.target as HTMLElement;
 }
 // function called when an element is dragged; captures the reference of the dragged element in the draggedItem variable
 
-function drop(event: DragEvent, targetId: string) {
+drop(event: DragEvent, targetId: string) {
   event.preventDefault();
-  const target = document.getElementById(targetId);
+  target = document.getElementById(targetId);
   if (target) {
     target.appendChild(draggedItem as Node);
     draggedItem = null;
