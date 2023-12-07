@@ -6,13 +6,15 @@ import { MissionColumnsComponent } from './mission-columns/mission-columns.compo
 import { MissionControlComponent } from './mission-control.component';
 import { MissionListComponent } from './mission-list/mission-list.component';
 import { MissionCardComponent } from './mission-card/mission-card.component';
+import { MissionEditComponent } from './mission-edit/mission-edit.component';
 
 
 @NgModule({
   declarations: [MissionControlComponent,
     MissionColumnsComponent,
     MissionListComponent,
-    MissionCardComponent],
+    MissionCardComponent,
+    MissionEditComponent],
   imports: [
     CommonModule,
     MissionControlRoutingModule
