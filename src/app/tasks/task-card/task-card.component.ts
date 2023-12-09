@@ -10,4 +10,9 @@ import { TEST_DATA_MISSIONTASKS } from 'src/app/shared/stub/tasks-for-mcs.stub';
 export class TaskCardComponent {
   @Input() task: Task = { ...TEST_DATA_MISSIONTASKS[0] };
 
+  open = false;
+
+  closeOnClick() {
+    this.open = false;
+  }
 }

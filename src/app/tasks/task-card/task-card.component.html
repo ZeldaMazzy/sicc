@@ -1,10 +1,18 @@
 <div class="card">
     <div class="card-body">
+
+        <div class="dropdown" dropdown [open]="open" (clickOutside)="closeOnClick()">
+            <a href="javascript:void(0)" (click)="open = !open">
+                ...
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="javascript:void(0)" (click)="closeOnClick()">Edit</a>
+                <a class="dropdown-item" href="javascript:void(0)" (click)="closeOnClick()">Delete</a>
+            </div>
+        </div>
+
         <p class="task-category">{{task.TaskCategory}}</p>
-
-
-
-        <h2 class="task-name">{{task.TaskName}}</h2>
+        <p class="task-name">{{task.TaskName}}</p>
         <p class="task-description">{{task.TaskDescription}}</p>
     </div>
 </div>
