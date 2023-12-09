@@ -1,0 +1,26 @@
+@import "../../../assets/color-library.scss";
+
+// .container {
+//   background-color: $active-background;
+// }
+
+// mission headers
+.inactive {
+  color: $inactive-text-color;
+
+}
+
+.active {
+  color: $active-text-color;
+
+}
+
+.para {
+  background-color: $primary-background;
+  border: 1px solid $border-color;
+  border-radius: 7.5px;
+}
+
+.btn {
+  color: $primary-background;
+}
