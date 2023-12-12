@@ -1,4 +1,4 @@
-import { Directive, ElementRef, EventEmitter, HostListener, Input, OnChanges, Output, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, EventEmitter, Input, OnChanges, Output, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[dropdown]'
@@ -17,20 +17,6 @@ export class DropdownDirective implements OnChanges {
     }
     else {
       this._renderer.removeClass(elem, "show");
-    }
-  }
-
-  @HostListener("document:click", ["Servent", "Servent.target"])
-  public onClick(event: MouseEvent, targetElement: HTMLElement): void {
-
-    if (!targetElement) {
-      return;
-    }
-
-    const clickInside = this._elem.nativeElement.contains(targetElement);
-
-    if (!clickInside && this.open) {
-      this.clickOutside.emit(event);
     }
   }
 }

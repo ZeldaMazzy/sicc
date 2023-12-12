@@ -10,14 +10,27 @@
 
 .task-category {
     color: $active-text-color;
+    text-transform: uppercase;
+    font-size: x-small;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 0;
+    margin-bottom: 2%;
 }
 
 .task-name {
     color: $active-text-color;
+    font-size: larger;
+    padding-left: 5%;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 2%;
 }
 
 .task-description {
     color: $active-text-color;
+    font-size: small;
+    padding-left: 5%;
 }
 
 .dropdown {
@@ -27,11 +40,16 @@
 a {
     color: $active-text-color;
     text-decoration: none;
+    font-size: large;
 }
 
 .dropdown-item {
     color: $inactive-text-color;
     background-color: $active-background;
+}
+
+.dropdown-menu {
+    background-color: $border-color;
 }
 
 // $primary-background : #121239 !default;
