@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Mission } from 'src/app/shared/models/mission';
+import { TEST_DATA_MISSIONDATA } from 'src/app/shared/stub/mission-control.stub';
 
 @Component({
   selector: 'app-mission-card',
@@ -7,7 +8,10 @@ import { Mission } from 'src/app/shared/models/mission';
   styleUrls: ['./mission-card.component.scss']
 })
 export class MissionCardComponent {
-  @Input() mission!: Mission[];
+  @Input() missions: Mission[] = TEST_DATA_MISSIONDATA;
 
+  constructor() {}
+
+  ngOninit():void {}
 
 }
