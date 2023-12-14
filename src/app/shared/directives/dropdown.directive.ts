@@ -26,6 +26,9 @@ export class DropdownDirective  {
     if (!clickInside && this.isOpen) {
       this.clickOutside.emit(event);
     }
+
+
   }
+
 
 }

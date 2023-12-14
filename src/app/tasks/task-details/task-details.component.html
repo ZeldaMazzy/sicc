@@ -14,20 +14,15 @@
     </div>
   </div>
   <div class="container-xl">
-    <div class="col-9">
+    <div>
       <p class="para">{{task.TaskDescription}}</p>
-    </div>
-    <div class="col-1">
-
-      <div class="dropdown" appDropdown [isOpen]="openDropDown" (clickOutside)="closeDropDown()">
-        <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="openDropDown = !openDropDown" >Dropdown button</a>
+        <div class="dropdown" appDropdown [isOpen]="openDropDown" (clickOutside)="closeDropDown()">
+        <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="openDropDown = !openDropDown" ><img class="burger" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/108px-Hamburger_icon.svg.png" alt="Hamburger Button Icon"></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" (click)="closeOnClick()">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#" routerLink=".../task.component">Edit</a>
+          <a class="dropdown-item" href="#" (click)="clickMethod('name')">Delete</a>
         </div>
       </div>
-
     </div>
   </div>
 </div>

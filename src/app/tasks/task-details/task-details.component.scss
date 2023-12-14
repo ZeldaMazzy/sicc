@@ -7,20 +7,33 @@
 // mission headers
 .inactive {
   color: $inactive-text-color;
+  margin: 50px 0px 0px 10px;
+  text-transform: uppercase;
 
 }
 
 .active {
   color: $active-text-color;
+  margin: 0px 0px 25px 10px;
+}
 
+.col-3 {
+  text-align: right;
 }
 
 .para {
   background-color: $primary-background;
   border: 1px solid $border-color;
   border-radius: 7.5px;
+  word-spacing: 3px;
+  padding: 20px;
 }
 
-.btn {
+.dropdown {
   color: $primary-background;
+}
+
+.burger {
+  width: 15px;
+  height: 20px;
 }

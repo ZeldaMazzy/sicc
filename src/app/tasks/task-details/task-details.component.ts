@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OnInit, Component, Injectable } from '@angular/core';
 import { TasksService } from '../tasks.service';
 import { Task } from 'src/app/shared/models/task';
@@ -20,10 +20,16 @@ export class TaskDetailsComponent implements OnInit{
   closeOnClick() {
     this.openDropDown = false;
   }
+  clickMethod(name:string) {
+    if(confirm("Are you sure you want to delete this? "+ name)) {
+      console.log("Delete ______")
+    }
+  }
 
   constructor (
     private taskservice: TasksService,
     private activatedroute: ActivatedRoute,
+    private router: Router,
   ) {  }
 
   ngOnInit () {
