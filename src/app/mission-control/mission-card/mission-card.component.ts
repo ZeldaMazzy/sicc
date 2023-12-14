@@ -7,5 +7,7 @@ import { Mission } from 'src/app/shared/models/mission';
   styleUrls: ['./mission-card.component.scss']
 })
 export class MissionCardComponent {
-  @Input() mission!:Mission;
+  @Input() mission!: Mission[];
+
+
 }

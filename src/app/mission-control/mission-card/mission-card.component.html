@@ -1,1 +1,9 @@
-<p>mission-card works!</p>
+<div *ngFor="let mission of mission" class="card" style="width: 18rem;">
+  <img class="card-img-top" src="../../../assets/img1.jpg" alt="card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{mission.MissionName}}</h5>
+    <p class="card-text">{{mission.MissionTagline}}</p>
+    <h6>{{mission.LaunchDate}}</h6>
+  </div>
+</div>
+

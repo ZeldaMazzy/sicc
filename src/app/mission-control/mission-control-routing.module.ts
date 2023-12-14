@@ -3,17 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 import { MissionControlComponent } from './mission-control.component';
 import { MissionListComponent } from './mission-list/mission-list.component';
 import { MissionEditComponent } from './mission-edit/mission-edit.component';
+import { MissionCardComponent } from './mission-card/mission-card.component';
 
-const routes: Routes = [{
-  path: ':mission-id',
-  component: MissionControlComponent
-},
-{path: 'mission-list',
-component: MissionListComponent},
-{path: 'add',
-component: MissionEditComponent},
-{path: 'edit/:id',
-component: MissionEditComponent},
+const routes: Routes = [
+  {path: 'mission-list',
+  component: MissionListComponent},
+  {path: 'add',
+  component: MissionEditComponent},
+  {path: 'edit/:id',
+  component: MissionEditComponent},
+  {path: 'mission-card',
+  component: MissionCardComponent},
+  {
+    path: ':mission-id',
+    component: MissionControlComponent
+  }
 ];
 
 @NgModule({
