@@ -1,8 +1,5 @@
 @import "../../../assets/color-library.scss";
 
-// .container {
-//   background-color: $active-background;
-// }
 
 // mission headers
 .inactive {
@@ -17,6 +14,21 @@
   margin: 0px 0px 25px 10px;
 }
 
+.dropdown {
+  background-color: $primary-background;
+  position: fixed;
+  top: 58px;
+  left: 660px;
+}
+
+.dropdown-button {
+  font-size: 10px;
+  color: $active-text-color;
+  text-decoration: none;
+  font-size: large;
+}
+
+
 .col-3 {
   text-align: right;
 }
@@ -29,11 +41,3 @@
   padding: 20px;
 }
 
-.dropdown {
-  color: $primary-background;
-}
-
-.burger {
-  width: 15px;
-  height: 20px;
-}

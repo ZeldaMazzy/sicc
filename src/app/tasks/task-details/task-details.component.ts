@@ -20,10 +20,15 @@ export class TaskDetailsComponent implements OnInit{
   closeOnClick() {
     this.openDropDown = false;
   }
-  clickMethod(name:string) {
-    if(confirm("Are you sure you want to delete this? "+ name)) {
-      console.log("Delete ______")
+  onDelete () {
+    if(confirm("Are you sure you want to delete "+ this.task.TaskName + "?")) {
+      this.taskservice.RemoveTask(this.task).subscribe (
+        () => {
+          this.router.navigate(['mission-control'])
+        }
+      )
     }
+
   }
 
   constructor (
@@ -31,6 +36,10 @@ export class TaskDetailsComponent implements OnInit{
     private activatedroute: ActivatedRoute,
     private router: Router,
   ) {  }
+
+  onEdit() {
+    this.router.navigate(['tasks', 'edit-tasks', this.task.TaskID])
+  }
 
   ngOnInit () {
    const taskid = this.activatedroute.snapshot.params["task-id"]

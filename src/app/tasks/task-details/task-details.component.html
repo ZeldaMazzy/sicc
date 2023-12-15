@@ -1,7 +1,14 @@
 <div class="container">
   <div class="row align-items-start">
     <div class="col-6">
-      <h3 class="inactive">{{task.TaskCategory}} - Mission {{task.MissionID}}</h3>
+        <h3 class="inactive">{{task.TaskCategory}} - Mission {{task.MissionID}}</h3>
+        <div class="dropdown" dropdown [open]="openDropDown" (clickOutside)="closeDropDown()">
+          <a class="dropdown-button" id="dropdownMenuButton" (click)="openDropDown = !openDropDown" >...</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" >Edit</a>
+            <a class="dropdown-item" (click)="onDelete()">Delete</a>
+          </div>
+        </div>
       <h1 class="active">{{task.TaskName}}</h1>
     </div>
     <div class="col-3">
@@ -16,13 +23,6 @@
   <div class="container-xl">
     <div>
       <p class="para">{{task.TaskDescription}}</p>
-        <div class="dropdown" appDropdown [isOpen]="openDropDown" (clickOutside)="closeDropDown()">
-        <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="openDropDown = !openDropDown" ><img class="burger" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/108px-Hamburger_icon.svg.png" alt="Hamburger Button Icon"></a>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" routerLink=".../task.component">Edit</a>
-          <a class="dropdown-item" href="#" (click)="clickMethod('name')">Delete</a>
-        </div>
-      </div>
     </div>
   </div>
 </div>
