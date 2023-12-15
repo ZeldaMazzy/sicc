@@ -6,18 +6,14 @@ import { MissionEditComponent } from './mission-edit/mission-edit.component';
 import { MissionCardComponent } from './mission-card/mission-card.component';
 
 const routes: Routes = [
-  {path: 'mission-list',
-  component: MissionListComponent},
-  {path: 'add',
-  component: MissionEditComponent},
-  {path: 'edit/:id',
-  component: MissionEditComponent},
-  {path: 'mission-card',
-  component: MissionCardComponent},
-  {
-    path: ':mission-id',
-    component: MissionControlComponent
-  }
+  {path: ':mission-id',
+  component: MissionControlComponent},
+{path: 'mission-list',
+component: MissionListComponent},
+{path: 'add',
+component: MissionEditComponent},
+{path: 'edit/:id',
+component: MissionEditComponent},
 ];
 
 @NgModule({

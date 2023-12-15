@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { MissionControlService } from '../mission-control.service';
 
 @Component({
@@ -7,7 +7,6 @@ import { MissionControlService } from '../mission-control.service';
   styleUrls: ['./mission-list.component.scss']
 })
 export class MissionListComponent {
-
   constructor (
     private missioncontrolservice: MissionControlService,
   ) { }
