@@ -9,7 +9,7 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/23/2077'),
         TaskBudget: 999,
         TaskCategory: 'Initial',
-        PhaseID: 6,
+        PhaseID: 0,
     },
     {
         TaskID: '1235',
@@ -19,7 +19,7 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/24/2077'),
         TaskBudget: 999,
         TaskCategory: 'Initial',
-        PhaseID: 7,
+        PhaseID: 1,
     },
     {
         TaskID: '1236',
@@ -29,7 +29,7 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/26/2077'),
         TaskBudget: 999,
         TaskCategory: 'On Route',
-        PhaseID: 8,
+        PhaseID: 2,
     },
     {
         TaskID: '1237',
@@ -39,7 +39,7 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/27/2077'),
         TaskBudget: 999,
         TaskCategory: 'On Route',
-        PhaseID: 9,
+        PhaseID: 0,
     },
     {
         TaskID: '1238',
@@ -49,6 +49,6 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/31/2077'),
         TaskBudget: 999,
         TaskCategory: 'End',
-        PhaseID: 10,
+        PhaseID: 1,
     }
 ]

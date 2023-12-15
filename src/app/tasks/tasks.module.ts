@@ -18,6 +18,9 @@ import { TaskDetailsComponent } from './task-details/task-details.component';
   imports: [
     CommonModule,
     TasksRoutingModule
+  ],
+  exports: [
+    TaskCardComponent,
   ]
 })
 export class TasksModule { }

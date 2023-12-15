@@ -4,6 +4,8 @@ import { Task } from 'src/app/shared/models/task';
 import { TasksComponent } from 'src/app/tasks/tasks.component';
 import { TasksService } from 'src/app/tasks/tasks.service';
 import { Subscription } from 'rxjs';
+import { Phase } from 'src/app/shared/models/phase';
+
 
 
 
@@ -15,24 +17,48 @@ import { Subscription } from 'rxjs';
 export class MissionColumnsComponent {
   missionTaskList: Task[] = [];
   @Input() missionID: string = "";
+  phases: Phase[] = [
+     { PhaseID: 0,
+      PhaseName: 'To Do',
+      ListOfTasks: [] },
 
+     { PhaseID: 1,
+      PhaseName: 'Planning',
+      ListOfTasks: [] },
+
+    { PhaseID: 2,
+      PhaseName: 'In Progress',
+      ListOfTasks: [] },
+
+]
     constructor(private tasksService: TasksService) { }
 
     ngOnInit(): void {
-      this.tasksService.GetTasksByMissionID(this.missionID).subscribe((missionTaskList) => this.missionTaskList = missionTaskList
+      this.tasksService.GetTasksByMissionID(this.missionID).subscribe((missionTaskList) => {
+        this.missionTaskList = missionTaskList
+        this.phases[0].ListOfTasks = this.missionTaskList.filter((task) => task.PhaseID === 0)
+        this.phases[1].ListOfTasks = this.missionTaskList.filter((task) => task.PhaseID === 1)
+        this.phases[2].ListOfTasks = this.missionTaskList.filter((task) => task.PhaseID === 2)
+
+      }
     )}
-
-    phases = [
-      { title: 'To Do', content: 'To Do Content' },
-      { title: 'Planning', content: 'Planning Content' },
-      { title: 'In Progress', content: 'In Progress Content' }
-
-    ];
 }
+    // import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+
+    // onDrop(event: CdkDragDrop<Task[]>, phase: Phase) {
+    //  if (event.previousContainer === event.container) {
+    //    moveItemInArray(phase.ListOfTasks, event.previousIndex, event.currentIndex);
+    //  } else {
+    //    const task = event.previousContainer.data[event.previousIndex];
+    //    transferArrayItem(event.previousContainer.data, phase.ListOfTasks, event.previousIndex, event.currentIndex);
 
 
 
 
 
+// this.missionTaskList.filter((task) => task.PhaseID === 2)
+      // { title: 'To Do', content: 'To Do Content' },
+      // { title: 'Planning', content: 'Planning Content' },
+      // { title: 'In Progress', content: 'In Progress Content' }
 
 

@@ -1,0 +1,35 @@
+@import '../../../assets/color-library.scss';
+
+.container, .row {
+  height: 100%;
+}
+
+.custom-column {
+  color: $active-text-color !important;
+  height: 100% !important;
+  overflow-y: auto;
+}
+
+.card {
+  border: 2px solid $border-color !important;
+  height: 100% !important;
+  background-color: transparent !important;
+}
+
+.custom-card {
+  background-color: $active-background !important;
+  height: 100% !important;
+  color: $active-text-color !important;
+}
+
+.btn-primary,
+.btn-secondary {
+  background-color: $active-background !important;
+  border-color: $active-background !important;
+  color: $active-text-color !important;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+
+}
+
+

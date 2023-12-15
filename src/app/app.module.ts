@@ -4,12 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ColumnComponent } from './column/column.component';
+
 
 @NgModule({
   declarations:
-  [AppComponent, ColumnComponent],
+  [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
