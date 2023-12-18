@@ -24,7 +24,7 @@ export class TaskDetailsComponent implements OnInit{
     if(confirm("Are you sure you want to delete "+ this.task.TaskName + "?")) {
       this.taskservice.RemoveTask(this.task).subscribe (
         () => {
-          this.router.navigate(['mission-control'])
+          this.router.navigate(['mission-control', 'mission-list'])
         }
       )
     }
