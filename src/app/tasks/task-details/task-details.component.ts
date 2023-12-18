@@ -25,6 +25,7 @@ export class TaskDetailsComponent implements OnInit{
       this.taskservice.RemoveTask(this.task).subscribe (
         () => {
           this.router.navigate(['mission-control', 'mission-list'])
+
         }
       )
     }
