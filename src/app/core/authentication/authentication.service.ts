@@ -31,6 +31,17 @@ public signUp(email: string, password: string): Observable<AuthenticationRespons
   .pipe(tap(authenticationResponse => this.handleAuth(authenticationResponse)));
 }
 
+public login(email: string, password: string): Observable<AuthenticationResponse> {
+  const request: any = {
+    email, password,
+    returnSecureToken: true
+  };
+
+
+  return this.http.post<AuthenticationResponse>(this.loginURL, request)
+    .pipe(tap(authenticationResponse => this.handleAuth(authenticationResponse)));
+}
+
 public signOut(): void {
   this.currentuser.next(null);
   this.router.navigate(["authentication"]);
@@ -43,13 +54,6 @@ public getUserDataFromStorage(): User | undefined {
     return undefined;
   }
   return JSON.parse(userData);
-}
-
-public getAccessTokenFromStorage(): string {
-  const userData = localStorage.getItem("UserData");
-  if (!userData) return "";
-  const data = JSON.parse(userData);
-  return data.accessToken || "";
 }
 
 public handleAuth(authResponse: AuthenticationResponse): void {
