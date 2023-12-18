@@ -15,8 +15,6 @@ import { DropdownDirective } from './directives/dropdown.directive';
     CommonModule,
     RouterModule
   ],
-  exports: [NavigationComponent,
-    DropdownDirective
-  ],
+  exports: [NavigationComponent, DropdownDirective]
 })
 export class SharedModule { }
