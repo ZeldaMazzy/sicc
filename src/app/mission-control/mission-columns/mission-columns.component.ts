@@ -43,6 +43,8 @@ export class MissionColumnsComponent {
       }
     )}
 }
+
+// DRAFT CODE FOR DRAG & DROP //
     // import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
     // onDrop(event: CdkDragDrop<Task[]>, phase: Phase) {

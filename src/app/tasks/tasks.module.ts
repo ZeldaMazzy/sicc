@@ -5,6 +5,7 @@ import { TasksComponent } from './tasks.component';
 import { TasksRoutingModule } from './tasks-routing.module';
 import { EditTaskComponent } from './edit-task/edit-task.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -17,7 +18,8 @@ import { TaskDetailsComponent } from './task-details/task-details.component';
   ],
   imports: [
     CommonModule,
-    TasksRoutingModule
+    TasksRoutingModule,
+    SharedModule
   ],
   exports: [
     TaskCardComponent,

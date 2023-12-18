@@ -9,6 +9,11 @@ const routes: Routes = [
   {
     path: 'tasks',
     loadChildren: () => import('./tasks/tasks.module').then(m => m.TasksModule)
+  },
+
+  {
+    path: 'authentication',
+    loadChildren: () => import('../app/core/core.module').then(m => m.CoreModule)
   }
 ];
 
