@@ -5,6 +5,7 @@ import { TasksComponent } from 'src/app/tasks/tasks.component';
 import { TasksService } from 'src/app/tasks/tasks.service';
 import { Subscription } from 'rxjs';
 import { Phase } from 'src/app/shared/models/phase';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 
 
@@ -45,7 +46,7 @@ export class MissionColumnsComponent {
 }
 
 // DRAFT CODE FOR DRAG & DROP //
-    // import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+
 
     // onDrop(event: CdkDragDrop<Task[]>, phase: Phase) {
     //  if (event.previousContainer === event.container) {
@@ -53,14 +54,5 @@ export class MissionColumnsComponent {
     //  } else {
     //    const task = event.previousContainer.data[event.previousIndex];
     //    transferArrayItem(event.previousContainer.data, phase.ListOfTasks, event.previousIndex, event.currentIndex);
-
-
-
-
-
-// this.missionTaskList.filter((task) => task.PhaseID === 2)
-      // { title: 'To Do', content: 'To Do Content' },
-      // { title: 'Planning', content: 'Planning Content' },
-      // { title: 'In Progress', content: 'In Progress Content' }
 
 
