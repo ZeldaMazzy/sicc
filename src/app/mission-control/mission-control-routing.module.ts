@@ -6,8 +6,8 @@ import { MissionEditComponent } from './mission-edit/mission-edit.component';
 import { MissionCardComponent } from './mission-card/mission-card.component';
 
 const routes: Routes = [
-  {path: ':mission-id',
-  component: MissionControlComponent},
+{path: ':mission-id',
+component: MissionControlComponent},
 {path: 'mission-list',
 component: MissionListComponent},
 {path: 'add',

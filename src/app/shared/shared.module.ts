@@ -6,10 +6,11 @@ import { DropdownDirective } from './directives/dropdown.directive';
 
 
 
+
 @NgModule({
   declarations: [
     NavigationComponent,
-    DropdownDirective
+    DropdownDirective,
   ],
   imports: [
     CommonModule,

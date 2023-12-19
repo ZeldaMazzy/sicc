@@ -2,6 +2,16 @@ import { Task } from "../models/task";
 
 export const TEST_DATA_MISSIONTASKS: Task[] = [
     {
+      TaskID: '',
+      TaskName: '',
+      MissionID: '',
+      TaskDescription: '',
+      TaskDeadline: new Date(''),
+      TaskBudget: Math.random(),
+      TaskCategory: '',
+      PhaseID: null,
+    },
+    {
         TaskID: '1234',
         TaskName: 'Prepare',
         MissionID: '12354',

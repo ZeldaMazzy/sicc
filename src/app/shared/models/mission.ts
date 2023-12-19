@@ -9,3 +9,5 @@ export interface Mission {
     MissionTagline: string;
     ListOfTasks: Task[];
 }
+
+// Get ahold of Zelda when I react "Add a new hero"
