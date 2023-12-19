@@ -8,5 +8,5 @@ import { Mission } from 'src/app/shared/models/mission';
 export class MissionCardComponent {
   @Input() mission!: Mission;
   imgNum:number = Math.ceil(Math.random()*10);
-  @Input() mission!:Mission;
+
 }
