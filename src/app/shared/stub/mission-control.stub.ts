@@ -39,3 +39,14 @@ export const TEST_DATA_MISSIONDATA: Mission[] = [
         }),
     }
 ]
+
+export const TEST_BLANK_MISSIONDATA: Mission =
+  {
+  MissionID: '',
+  MissionBudget: Math.random(),
+  Description: '',
+  MissionName: '',
+  LaunchDate: new Date(''),
+  MissionTagline: '',
+  ListOfTasks: [],
+  }
