@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 import { AuthenticationResponse } from './authentication-response.model';
 import { User } from 'src/app/shared/user/user.model';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -19,45 +18,45 @@ export class AuthenticationService {
   currentuser: any;
 
 
-constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
-public signUp(email: string, password: string): Observable<AuthenticationResponse> {
-  const request: any = {
-    email, password,
-    returnSecureToken: true
-  }
+  public signUp(email: string, password: string): Observable<AuthenticationResponse> {
+    const request: any = {
+      email, password,
+      returnSecureToken: true
+    }
 
-  return this.http.post<AuthenticationResponse>(this.signupURL, request)
-  .pipe(tap(authenticationResponse => this.handleAuth(authenticationResponse)));
-}
-
-public login(email: string, password: string): Observable<AuthenticationResponse> {
-  const request: any = {
-    email, password,
-    returnSecureToken: true
-  };
-
-
-  return this.http.post<AuthenticationResponse>(this.loginURL, request)
+    return this.http.post<AuthenticationResponse>(this.signupURL, request)
     .pipe(tap(authenticationResponse => this.handleAuth(authenticationResponse)));
-}
-
-public signOut(): void {
-  this.currentuser.next(null);
-  this.router.navigate(["authentication"]);
-}
-
-
-public getUserDataFromStorage(): User | undefined {
-  const userData = localStorage.getItem("UserData");
-  if (!userData) {
-    return undefined;
   }
-  return JSON.parse(userData);
-}
 
-public handleAuth(authResponse: AuthenticationResponse): void {
-  const {email, localId, idToken} = authResponse
-  const expiresIn: number = Date.now() + +authResponse.expiresIn;
-}
+  public login(email: string, password: string): Observable<AuthenticationResponse> {
+    const request: any = {
+      email, password,
+      returnSecureToken: true
+    };
+
+
+    return this.http.post<AuthenticationResponse>(this.loginURL, request)
+      .pipe(tap(authenticationResponse => this.handleAuth(authenticationResponse)));
+  }
+
+  public signOut(): void {
+    this.currentuser.next(null);
+    this.router.navigate(["authentication"]);
+  }
+
+
+  public getUserDataFromStorage(): User | undefined {
+    const userData = localStorage.getItem("UserData");
+    if (!userData) {
+      return undefined;
+    }
+    return JSON.parse(userData);
+  }
+
+  public handleAuth(authResponse: AuthenticationResponse): void {
+    const {email, localId, idToken} = authResponse
+    const expiresIn: number = Date.now() + +authResponse.expiresIn;
+  }
 }

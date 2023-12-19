@@ -1,0 +1,25 @@
+.mission-card{
+  box-shadow: #2B2B66 0px 54px 55px, #2B2B66 0px -12px 30px, #2B2B66 0px 4px 6px, #2B2B66 0px 12px 13px, #2B2B66 0px -3px 5px;
+  border: 3px solid #2B2B66;
+  border-radius: 0.5rem;
+  background-color: #EEF2F5;
+  margin: 2rem;
+  width: 33%;
+}
+.mission-title {
+  text-align: center;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  color: #121239;
+}
+.mission-text {
+  color: #121239;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+}
+.mission-date {
+  color: #121239;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  font-size: 12px;
+}
+.mission-img {
+  max-height: 18rem;
+}
