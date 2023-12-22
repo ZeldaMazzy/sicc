@@ -1,20 +1,28 @@
-<p>mission-columns works!</p>
+<div class="container">
+  <div class="row">
 
-
-<!--
-    Priority: 
-        3 columns that populate from missions  
-        Fit based on # of missions
-        Allow for editing/changing of missions.
-
-    Later: 
-        Missions can be dragged/dropped from columns
-        Create additional/misc columns
-        LOading
-
-
-    Skylar-Task Cards
-    Matt- Containers
-
-
--->
+    <!-- Column 1 -->
+    <div class="col-md-4 custom-column"
+      *ngFor="let phase of phases">
+      <div class="card">
+        <div class="card-header custom-card">
+          <h5 class="card-title">{{ phase.PhaseName }}</h5>
+          <button class="btn btn-primary position-absolute top-0 end-0 mt-2 mr-2"> + </button>
+          <div [id]="'card-list'+phase.PhaseID"
+          class="card-list"
+          [cdkDropListConnectedTo]="phase.ConnectsTo"
+            cdkDropList
+            [cdkDropListData]="phase.ListOfTasks"
+            (cdkDropListDropped)="dropTask($event, phase.ListOfTasks)">
+            <app-task-card
+              *ngFor="let task of phase.ListOfTasks"
+              [task]="task"
+              cdkDrag
+              (click)="navigateToTask(task.TaskID)">
+            </app-task-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

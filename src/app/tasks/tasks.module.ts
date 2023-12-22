@@ -6,6 +6,7 @@ import { TasksRoutingModule } from './tasks-routing.module';
 import { EditTaskComponent } from './edit-task/edit-task.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
 import { SharedModule } from '../shared/shared.module';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 
@@ -19,7 +20,11 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     TasksRoutingModule,
-    SharedModule
+    SharedModule,
+    DragDropModule
+  ],
+  exports: [
+    TaskCardComponent,
   ]
 })
 export class TasksModule { }

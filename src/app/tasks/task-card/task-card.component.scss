@@ -4,7 +4,7 @@
 .card {
     background-color: $active-background;
     border-color: $border-color;
-    width: 350px;
+    width: 320px;
     border-radius: 25px;
 }
 
@@ -50,6 +50,7 @@ a {
 
 .dropdown-menu {
     background-color: $border-color;
+    right: 0px;
 }
 
 // $primary-background : #121239 !default;

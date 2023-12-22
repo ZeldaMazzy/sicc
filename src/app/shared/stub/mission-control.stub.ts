@@ -8,10 +8,10 @@ export const TEST_DATA_MISSIONDATA: Mission[] = [
     {
         MissionID: '12354',
         MissionBudget: 999999,
-        Description: 'A mission with data',
-        MissionName: 'The Mission',
-        LaunchDate: new Date('12/25/2077'),
-        MissionTagline: 'the mission tag',
+        Description: 'Mission to Uranus',
+        MissionName: 'Artemis',
+        LaunchDate: new Date('4/1/2420'),
+        MissionTagline: 'Deep Dive Into the Unknown',
         ListOfTasks: TEST_DATA_MISSIONTASKS.filter(task => {
             return task.MissionID == '12354'
         }),

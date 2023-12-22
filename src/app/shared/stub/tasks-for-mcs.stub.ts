@@ -3,13 +3,13 @@ import { Task } from "../models/task";
 export const TEST_DATA_MISSIONTASKS: Task[] = [
     {
         TaskID: '1234',
-        TaskName: 'Prepare',
+        TaskName: 'Build the Probe',
         MissionID: '12354',
         TaskDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse corporis sint rem placeat molestiae provident earum explicabo quos obcaecati nam molestias possimus repellat, error, ad doloribus necessitatibus laborum temporibus architecto. Quos unde cum quasi sint voluptatibus excepturi facilis odio nihil! Libero temporibus vero veritatis reprehenderit dolorem ut vitae nobis labore maiores ab, qui delectus, pariatur consequuntur? Consequatur iste voluptatem quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic corrupti autem, necessitatibus nam earum perferendis saepe animi. Dolores suscipit quis corrupti molestias voluptatem maxime, illum, voluptas porro quod quae amet?',
         TaskDeadline: new Date('12/23/2077'),
         TaskBudget: 999,
         TaskCategory: 'Initial',
-        PhaseID: 6,
+        PhaseID: 0,
     },
     {
         TaskID: '1235',
@@ -19,7 +19,7 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/24/2077'),
         TaskBudget: 999,
         TaskCategory: 'Initial',
-        PhaseID: 7,
+        PhaseID: 1,
     },
     {
         TaskID: '1236',
@@ -29,7 +29,7 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/26/2077'),
         TaskBudget: 999,
         TaskCategory: 'On Route',
-        PhaseID: 8,
+        PhaseID: 2,
     },
     {
         TaskID: '1237',
@@ -39,7 +39,7 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/27/2077'),
         TaskBudget: 999,
         TaskCategory: 'On Route',
-        PhaseID: 9,
+        PhaseID: 0,
     },
     {
         TaskID: '1238',
@@ -49,6 +49,6 @@ export const TEST_DATA_MISSIONTASKS: Task[] = [
         TaskDeadline: new Date('12/31/2077'),
         TaskBudget: 999,
         TaskCategory: 'End',
-        PhaseID: 10,
+        PhaseID: 1,
     }
 ]

@@ -7,6 +7,8 @@ import { MissionControlComponent } from './mission-control.component';
 import { MissionListComponent } from './mission-list/mission-list.component';
 import { MissionCardComponent } from './mission-card/mission-card.component';
 import { MissionEditComponent } from './mission-edit/mission-edit.component';
+import { TasksModule } from '../tasks/tasks.module';
+import { DragDropModule } from '@angular/cdk/drag-drop'
 
 
 @NgModule({
@@ -17,7 +19,10 @@ import { MissionEditComponent } from './mission-edit/mission-edit.component';
     MissionEditComponent],
   imports: [
     CommonModule,
-    MissionControlRoutingModule
+    MissionControlRoutingModule,
+    TasksModule,
+    DragDropModule
+
   ]
 })
 export class MissionControlModule { }
