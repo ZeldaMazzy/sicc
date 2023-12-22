@@ -15,6 +15,9 @@ const routes: Routes = [
     path: 'authentication',
     loadChildren: () => import('../app/core/core.module').then(m => m.CoreModule)
   }
+
+
+
 ];
 
 @NgModule({

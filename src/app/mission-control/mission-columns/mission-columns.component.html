@@ -1,77 +1,28 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 custom-column" *ngFor="let phase of phases">
-      <!-- Column -->
-      <div class="card position-relative">
-        <div class="card-header custom-card">
-          <h5 class="card-title">{{ phase.PhaseName }}</h5>
-           <button class="btn btn-primary position-absolute top-0 end-0 mt-2 mr-2"> + </button>
 
-           <!-- DROP DOWN -->
-           <!-- <div class="dropdown position-absolute top-0 end-0 mt-2">
-              <button class="btn
-              .btn-secondary dropdown-toggle position-absolute top-0 end-0 mt-2" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-
-                <!-- Meatball icon -->
-               <!-- <i class="fas fa-ellipsis-v"></i>
-              </button> -->
-            <!--  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                Dropdown menu items
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-                <a class="dropdown-item" href="#">Action 3</a>
-        </div> -->
-        <div id="card-list">
-          <app-task-card *ngFor="let Task of phase.ListOfTasks"></app-task-card>
-
-          <!-- content for each column -->
-
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!--
-    Priority:
-        3 columns that populate from missions
-        Fit based on # of missions
-        Allow for editing/changing of missions.
-
-    Later:
-        Missions can be dragged/dropped from columns
-        Create additional/misc columns
-        LOading
-
-
-    Skylar-Task Cards
-    Matt- Containers
-
-
--->
-
-<-- DRAFT CODE FOR DRAG & DROP -->
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-4 custom-column" *ngFor="let phase of phases" cdkDropList (cdkDropListDropped)="onDrop($event, phase)">
-      <!-- Column
-      <div class="card position-relative">
+    <!-- Column 1 -->
+    <div class="col-md-4 custom-column"
+      *ngFor="let phase of phases">
+      <div class="card">
         <div class="card-header custom-card">
           <h5 class="card-title">{{ phase.PhaseName }}</h5>
           <button class="btn btn-primary position-absolute top-0 end-0 mt-2 mr-2"> + </button>
-          <div id="card-list" cdkDrag>
-            <app-task-card *ngFor="let Task of phase.ListOfTasks" cdkDrag>{{ Task.name }}</app-task-card>
-            <!-- content for each column
+          <div [id]="'card-list'+phase.PhaseID"
+          class="card-list"
+          [cdkDropListConnectedTo]="phase.ConnectsTo"
+            cdkDropList
+            [cdkDropListData]="phase.ListOfTasks"
+            (cdkDropListDropped)="dropTask($event, phase.ListOfTasks)">
+            <app-task-card
+              *ngFor="let task of phase.ListOfTasks"
+              [task]="task"
+              cdkDrag
+              (click)="navigateToTask(task.TaskID)">
+            </app-task-card>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
-
-<!-- <div class="card">
-        <div class="card-header">
-          <h5 class="card-title">{{ phase.PhaseName }}</h5>
-           <button class="btn btn-primary position-absolute top-0 end-0 mt-2 mr-2"> + </button> -->
+</div>

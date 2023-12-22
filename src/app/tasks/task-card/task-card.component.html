@@ -13,6 +13,12 @@
 
         <p class="task-category">{{task.TaskCategory}}</p>
         <p class="task-name">{{task.TaskName}}</p>
-        <p class="task-description">{{task.TaskDescription}}</p>
+        <p class="task-description">
+          {{
+            (task.TaskDescription.length > 50) ?
+              (task.TaskDescription | slice:0:50) + ' ...' :
+              task.TaskDescription
+          }}
+        </p>
     </div>
 </div>
